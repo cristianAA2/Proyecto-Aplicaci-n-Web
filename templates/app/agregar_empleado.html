@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center"> <!-- Agregado para centrar el contenido -->
+            <div class="col-md-6"> <!-- Ajusta el tamaño del formulario según tus necesidades -->
+
+                <h2 class="text-center">Agregar Empleado</h2>
+                <hr>
+
+                {% if user.is_superuser %}
+                    <form method="post" enctype="multipart/form-data" class="mt-4">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="rut_e" class="form-label">Rut:</label>
+                            <input type="text" name="rut_e" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" name="nombre" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">Apellido:</label>
+                            <input type="text" name="apellido" class="form-control" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Agregar Empleado</button>
+                    </form>
+                {% else %}
+                    <div class="alert alert-danger mt-4" role="alert">
+                        Acceso Denegado
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}

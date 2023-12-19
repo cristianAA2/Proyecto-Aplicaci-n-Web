@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="title text-center display-3 mb-5" style="color: #ff69b4;">Acerca de nosotros</h1>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-us-text" style="color: #333; background-color: #fce4ec; padding: 20px; border-radius: 10px; border: 1px solid #e0a7cf;">
+                    <p>Nuestra peluquería se encuentra en el corazón de la población Pablo Neruda y ostentamos con orgullo una antigüedad de 22 años, sirviendo con dedicación a nuestros vecinos y clientes de diversos sectores de Valdivia. Hemos creado un ambiente acogedor y familiar, donde nuestra principal preocupación siempre ha sido dejar completamente satisfechos a nuestros clientes con los estilos de servicio que requieren, ya sea en cortes, colores o barbas según sus solicitudes.</p>
+                    <br>
+                    <p>La dueña se destaca por su excepcional habilidad para crear colores exclusivos en tonos personalizados. En nuestra peluquería ofrecemos una atención cercana incluso a los más pequeños, niños y bebés, con obsequios adaptados a su edad. Además, proporcionamos cafés o jugos para nuestros clientes durante los tiempos de espera. La característica distintiva de nuestra peluquería es nuestra longevidad en el sector y la cálida acogida que brindamos a nuestros clientes, quienes quedan siempre muy satisfechos con el servicio que les ofrecemos.</p>
+                    <br>
+                    <p>Nuestros clientes son los principales portadores de la publicidad de nuestra peluquería y su lealtad a lo largo de tantos años ha sido fundamental para nuestra permanencia. Nos mantenemos constantemente actualizados, capacitándonos en los últimos estilos, tanto en cortes como en colorimetría y barbas, así como en el uso de nuevos productos.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="imagen-container" style="border: 1px solid #e0a7cf; border-radius: 10px; overflow: hidden;">
+                    <img src="{% static 'images/imagen_1.jpeg' %}" alt="Imagen 1" class="img-fluid fotosxd" />
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

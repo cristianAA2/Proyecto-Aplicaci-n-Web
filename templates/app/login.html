@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="container formulario-login d-flex align-items-center">
+        <div class="mx-auto">
+            <h2 class="text-center">Iniciar sesión</h2>
+            <hr>
+            <form action="/login/" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico" class="form-control">
+                    </div>
+                    <div class="col-md-12 mb-4">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" id="password" placeholder="Ingrese su contraseña"  name="password" class="form-control">
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+                <a href="/" class="btn btn-secondary">Inicio</a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

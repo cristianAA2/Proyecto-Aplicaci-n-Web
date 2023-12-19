@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <h2 class="text-center">Editar Empleado</h2>
+    <hr>
+    {% if user.is_superuser %}
+        <div class="row justify-content-center">
+            <form method="post" action="{% url 'editar_empleado' empleado.rut_e %}" class="col-sm-6">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" value="{{ empleado.nombre }}" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" value="{{ empleado.apellido }}" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+        </div>
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            Acceso Denegado
+        </div>
+    {% endif %}
+{% endblock content %}

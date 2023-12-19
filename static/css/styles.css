@@ -1,0 +1,217 @@
+/* Index */
+.logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo1 {
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.reserva-container {
+    text-align: center; /* Centra la imagen horizontalmente */
+    margin-top: 20px; /* Espacio entre las otras imágenes y la nueva imagen */
+}
+
+.reserva-image {
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+
+/* Estilos para imágenes variables */
+.image-var {
+    width: 50px;
+    height: 50px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #495057; /* Actualiza con el color que prefieras */
+    color: #fff; /* Color del texto */
+    padding: 40px 0; /* Agrega un poco de espacio para un mejor espaciado */
+}
+
+footer h3,
+footer p,
+footer address {
+    color: #fff; /* Establece el color del texto */
+}
+
+/* Estilos para iconos sociales en el pie de página */
+footer .social-icons {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Estilos para el iframe en el pie de página */
+footer iframe {
+    border: 2px solid #fff; /* Agrega un borde para una mejor visibilidad */
+    border-radius: 8px; /* Opcional: Agrega borde redondeado para un aspecto más suave */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    padding-top: 50px;
+    flex: 1; /* Permite que el contenedor principal crezca para ocupar el espacio disponible */
+}
+
+/* Estilos generales para el cuerpo y HTML */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(252, 252, 252);
+    min-height: 100vh; /* Garantiza que el contenido ocupe al menos toda la altura de la ventana */
+}
+
+/* Estilos para la barra con efecto hover */
+.barra {
+    background-color: rgb(244, 210, 238);
+}
+
+.barra:hover {
+    color: white;
+}
+
+
+/*Cards*/
+.display-3 {
+    color: #343a40; /* Color del título */
+}
+
+.card {
+    border: 1px solid #dee2e6; /* Borde de las tarjetas */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el ratón */
+}
+
+.service-image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #ffffff; /* Color de fondo del cuerpo de la tarjeta */
+}
+
+.formulario-reserva {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Añadir un margen superior para separar del contenido superior */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin-left: auto;
+    margin-right: auto;
+    color: #ff69b4;
+
+}
+
+.formulario-reserva h2, .formulario-reserva p {
+    color: #ff69b4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.formulario-reserva label {
+    font-weight: bold;
+    color: #ff69b4;
+
+}
+
+.formulario-reserva .form-control {
+    border-radius: 5px;
+}
+
+.formulario-reserva .btn-primary {
+    background-color: #ff69b4; /* Color rosado para el botón */
+    border-color: #ff69b4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.formulario-reserva .btn-primary:hover {
+    background-color: #d1478e; /* Color rosado más oscuro al pasar el ratón */
+    border-color: #d1478e;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.formulario-reserva .alert-danger {
+    margin-top: 20px;
+    color: #ff69b4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/*Formulario inicio sesion */
+.formulario-login {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Añadir un margen superior para separar del contenido superior */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin-left: auto;
+    margin-right: auto;
+    color: #ff69b4;
+}
+
+.formulario-login h2 {
+    color: #ff69b4; /* Color rosa para el título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra en el título */
+}
+
+.formulario-login .form-label {
+    color: #ff69b4; /* Color rosa para las etiquetas */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra en las etiquetas */
+}
+
+.formulario-login .login-input {
+    border: 1px solid #ff69b4; /* Borde rosa para los campos de entrada */
+    color: #ff69b4; /* Color rosa para el texto de los campos de entrada */
+}
+
+.formulario-login .btn-primary {
+    background-color: #ff69b4; /* Color de fondo rosa para el botón primario */
+    border: 1px solid #ff69b4; /* Borde rosa para el botón primario */
+}
+
+
+
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-description {
+    display: none;
+}
+
+.card:hover .card-description {
+    display: block;
+}

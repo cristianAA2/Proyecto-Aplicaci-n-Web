@@ -1,0 +1,26 @@
+{% extends 'app/base.html'%}
+
+{%block content%}
+    <h1>Detalles de la reserva</h1>
+    <hr>
+    <table class="table table-bordered table-hover table-striped">
+        <thead >
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{reserva.id_cliente.nombre}}</td>
+                <td>{{reserva.id_cliente.apellido}}</td>
+                <td>{{reserva.id_cliente.fono}}</td>
+                <td>{{reserva.id_cliente.id_cliente}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <a href="/dashboard" class="btn btn-primary text-center">Volver</a>
+{% endblock content%}

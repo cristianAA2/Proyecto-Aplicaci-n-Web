@@ -1,0 +1,89 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <div class="container formulario-reserva d-flex align-items-center">
+        <div class="mx-auto">
+            <h2 class="text-center">Formulario de reserva</h2>
+            <hr>
+            <form action="/reservas/" method="post" onsubmit="return validarFormulario()">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Nombre</label>
+                        <input id="nombre" type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
+                        <div id="nombre_msj"></div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Apellido</label>
+                        <input id="apellido" type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido">
+                        <div id="apellido_msj"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Correo electrónico</label>
+                        <input id="id_cliente" type="email" class="form-control" name="id_cliente" placeholder="Ingrese su correo">
+                        <div id="correo_msj"></div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Teléfono</label>
+                        <input id="fono" class="form-control" type="text" name="fono" placeholder="Ingrese su teléfono" maxlength="9">
+                        <div id="fono_msj"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Servicio</label>
+                        <select id="id_servicio" name="id_servicio" class="form-select" aria-label="Default select example">
+                            <option selected disabled>Elija una opción</option>
+                            {% for serv in servicios %}
+                                <option value="{{ serv.id_servicio }}">{{ serv.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                        <div id="servicio_msj"></div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Empleado</label>
+                        <select id="rut_e" name="rut_e" class="form-select" aria-label="Default select example">
+                            <option selected disabled>Seleccione un Empleado</option>
+                            {% for emp in empleados %}
+                                <option value="{{ emp.rut_e }}">{{ emp.nombre }} {{ emp.apellido }}</option>
+                            {% endfor %}
+                        </select>
+                        <div id="empleado_msj"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Fecha</label>
+                        <input id="fecha" type="date" class="form-control" name="fecha" min="{{ current_date|date:'Y-m-d' }}" max="{{ end_date|date:'Y-m-d' }}">
+                        <div id="fecha_msj"></div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label">Hora</label>
+                        <select id="hora" name="hora" class="form-select">
+                            <option selected disabled>Elija una hora</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                        </select>
+                        <div id="fecha_hora_msj"></div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Reservar</button>
+            </form>
+
+            {% if error_message %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error_message }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}

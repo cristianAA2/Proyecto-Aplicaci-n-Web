@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="logos-container">
+    <img src="{% static 'images/imagen5.png' %}" alt="imagen1" class="logo1">
+    <img src="{% static 'images/Logo.png' %}" alt="logo1" class="logo1">
+    <img src="{% static 'images/imagen5.png' %}" alt="imagen1" class="logo1">
+</div>
+
+<div class="reserva-container">
+    <a href="{% url 'reservas' %}">
+        <img src="{% static 'images/reserva.png' %}" alt="reserva" class="reserva-image">
+    </a>
+</div>
+
+{% endblock content %}

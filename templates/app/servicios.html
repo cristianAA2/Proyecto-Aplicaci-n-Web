@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="container mt-5">
+    <h1 class="title text-center display-3 mb-5" style="color: #ff69b4;">Nuestros Servicios</h1>
+    <hr class="my-4">
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for serv in servicios %}
+            <div class="col">
+                <div class="card h-100" id="service-card">
+                    <img src="{% static 'imagenes/' %}{{ serv.id_servicio }}.jpg" class="card-img-top service-image" alt="{{ serv.nombre }}">
+                    <div class="card-body" id="service-card-body">
+                        <h5 class="card-title">{{ serv.nombre }}</h5>
+                        <p class="card-text card-description">{{ serv.descripcion }}</p>
+                    </div>
+                    <div class="card-footer" id="service-card-footer">
+                        <small class="text-muted">Precio: <span class="text-success">${{ serv.precio }}</span></small>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="mt-4"></div>
+</div>
+
+{% endblock content %}
